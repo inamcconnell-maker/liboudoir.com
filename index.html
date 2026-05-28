@@ -40,180 +40,56 @@ nav.scrolled .hamburger span{background:var(--b)}
 .mobile-menu a{font-family:var(--serif);font-style:italic;font-size:2.2rem;color:var(--b);text-decoration:none}
 .mobile-close{position:absolute;top:2rem;right:2rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--b);font-family:var(--sans);font-weight:200}
 
-/* ── HERO — full bleed photo, text overlaid ── */
-.hero{
-  position:relative;
-  width:100%;
-  height:100vh;
-  min-height:600px;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.hero-bg{
-  position:absolute;inset:0;
-  background:#d9d3cd; /* replaced by your photo */
-  z-index:0;
-}
-/* when you add a real photo: */
+/* HERO */
+.hero{position:relative;width:100%;height:100vh;min-height:600px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero-bg{position:absolute;inset:0;z-index:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
-/* dark overlay so text is readable over the photo */
-.hero-overlay{
-  position:absolute;inset:0;
-  background:rgba(0,0,0,0.28);
-  z-index:1;
-}
-.hero-content{
-  position:relative;z-index:2;
-  text-align:center;
-  padding:0 2rem;
-  display:flex;flex-direction:column;align-items:center;gap:1.5rem;
-}
-.hero-eyebrow{
-  font-family:var(--sans);font-weight:300;font-size:.62rem;
-  letter-spacing:.35em;text-transform:lowercase;color:rgba(255,255,255,0.75);
-}
-.hero-title{
-  font-family:var(--serif);font-weight:400;
-  font-size:clamp(3.8rem,8vw,8rem);
-  line-height:1.0;color:var(--w);
-}
+.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.32);z-index:1}
+.hero-content{position:relative;z-index:2;text-align:center;padding:0 2rem;display:flex;flex-direction:column;align-items:center;gap:1.5rem}
+.hero-eyebrow{font-family:var(--sans);font-weight:300;font-size:.62rem;letter-spacing:.35em;text-transform:lowercase;color:rgba(255,255,255,0.75)}
+.hero-title{font-family:var(--serif);font-weight:400;font-size:clamp(3.8rem,8vw,8rem);line-height:1.0;color:var(--w)}
 .hero-title em{font-style:italic}
-.hero-subtitle{
-  font-family:var(--sans);font-weight:300;font-size:.8rem;
-  letter-spacing:.18em;text-transform:lowercase;color:rgba(255,255,255,0.8);
-  max-width:380px;line-height:2;
-}
+.hero-subtitle{font-family:var(--sans);font-weight:300;font-size:.8rem;letter-spacing:.18em;text-transform:lowercase;color:rgba(255,255,255,0.8);max-width:380px;line-height:2}
 .hero-actions{display:flex;align-items:center;gap:2.5rem;margin-top:.5rem}
-.btn-white{
-  font-family:var(--sans);font-weight:300;font-size:.65rem;
-  letter-spacing:.3em;text-transform:lowercase;
-  color:var(--b);background:var(--w);
-  padding:1rem 2.4rem;text-decoration:none;transition:opacity .2s;
-}
+.btn-white{font-family:var(--sans);font-weight:300;font-size:.65rem;letter-spacing:.3em;text-transform:lowercase;color:var(--b);background:var(--w);padding:1rem 2.4rem;text-decoration:none;transition:opacity .2s}
 .btn-white:hover{opacity:.85}
-.btn-outline-white{
-  font-family:var(--sans);font-weight:300;font-size:.65rem;
-  letter-spacing:.3em;text-transform:lowercase;color:var(--w);
-  text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.6);
-  padding-bottom:2px;transition:opacity .2s;
-}
+.btn-outline-white{font-family:var(--sans);font-weight:300;font-size:.65rem;letter-spacing:.3em;text-transform:lowercase;color:var(--w);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.6);padding-bottom:2px;transition:opacity .2s}
 .btn-outline-white:hover{opacity:.7}
-/* placeholder text shown when no image */
-.hero-ph-label{
-  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
-  z-index:3;font-family:var(--sans);font-weight:300;font-size:.62rem;
-  letter-spacing:.2em;text-transform:lowercase;color:rgba(255,255,255,0.4);
-  text-align:center;
-}
 
-/* ── EDITORIAL INTRO (Niki Marie style) ── */
-.editorial-intro{
-  display:grid;
-  grid-template-columns:420px 1fr;
-  min-height:85vh;
-  overflow:hidden;
-  border-bottom:1px solid var(--lg);
-}
-/* Left column: big text + divider + body + small portrait */
-.ei-left{
-  padding:5rem 4rem 5rem 5rem;
-  display:flex;flex-direction:column;justify-content:flex-start;
-  border-right:1px solid var(--lg);
-}
-.ei-display{
-  font-family:var(--serif);font-weight:400;
-  font-size:clamp(3rem,5vw,5.5rem);
-  line-height:0.95;letter-spacing:.04em;
-  color:var(--b);text-transform:uppercase;
-  margin-bottom:1.5rem;
-}
-.ei-sub-label{
-  font-family:var(--sans);font-weight:300;font-size:.62rem;
-  letter-spacing:.32em;text-transform:uppercase;color:var(--g);
-  margin-bottom:1.2rem;
-}
+/* EDITORIAL INTRO */
+.editorial-intro{display:grid;grid-template-columns:420px 1fr;min-height:85vh;overflow:hidden;border-bottom:1px solid var(--lg)}
+.ei-left{padding:5rem 4rem 5rem 5rem;display:flex;flex-direction:column;justify-content:flex-start;border-right:1px solid var(--lg)}
+.ei-display{font-family:var(--serif);font-weight:400;font-size:clamp(3rem,5vw,5.5rem);line-height:0.95;letter-spacing:.04em;color:var(--b);text-transform:uppercase;margin-bottom:1.5rem}
+.ei-sub-label{font-family:var(--sans);font-weight:300;font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:var(--g);margin-bottom:1.2rem}
 .ei-divider{width:100%;height:1px;background:var(--lg);margin:1.8rem 0 2rem}
-.ei-body{
-  font-family:var(--sans);font-weight:300;font-size:.88rem;
-  line-height:1.9;color:var(--b);max-width:300px;margin-bottom:.5rem;
-  text-align:center;
-}
-.ei-body-small{
-  font-family:var(--sans);font-weight:300;font-size:.65rem;
-  letter-spacing:.22em;text-transform:uppercase;color:var(--g);
-  text-align:center;margin-bottom:3rem;
-}
-/* Small portrait photo at bottom left */
-.ei-portrait{
-  width:240px;height:300px;overflow:hidden;background:#d9d3cd;
-  position:relative;flex-shrink:0;
-}
-.ei-portrait img{width:100%;height:100%;object-fit:cover;display:block}
-.ei-portrait-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#d9d3cd}
-.ei-portrait-ph span{font-family:var(--sans);font-weight:300;font-size:.6rem;letter-spacing:.15em;text-transform:lowercase;color:rgba(26,26,26,.3)}
-.ei-portrait-label{
-  font-family:var(--sans);font-weight:400;font-size:.6rem;
-  letter-spacing:.28em;text-transform:uppercase;color:var(--b);
-  text-align:center;margin-top:.75rem;
-}
-/* Right column: 3 tall photos side by side, slightly offset */
-.ei-right{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:6px;
-  padding:0;
-  align-items:start;
-  overflow:hidden;
-}
-.ei-photo{overflow:hidden;background:#d9d3cd}
-.ei-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.ei-body{font-family:var(--sans);font-weight:300;font-size:.88rem;line-height:1.9;color:var(--b);max-width:300px;margin-bottom:.5rem;text-align:center}
+.ei-body-small{font-family:var(--sans);font-weight:300;font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--g);text-align:center;margin-bottom:3rem}
+.ei-portrait{width:240px;height:300px;overflow:hidden;position:relative;flex-shrink:0}
+.ei-portrait img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.ei-portrait-label{font-family:var(--sans);font-weight:400;font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--b);text-align:center;margin-top:.75rem}
+.ei-right{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:0;align-items:start;overflow:hidden}
+.ei-photo{overflow:hidden}
+.ei-photo img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .6s ease}
 .ei-photo:hover img{transform:scale(1.03)}
-.ei-photo-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#d9d3cd}
-.ei-photo-ph span{font-family:var(--sans);font-weight:300;font-size:.6rem;letter-spacing:.15em;text-transform:lowercase;color:rgba(26,26,26,.25)}
-/* First photo starts higher, middle starts lower, third starts mid — offset effect */
 .ei-photo:nth-child(1){height:680px;margin-top:60px}
 .ei-photo:nth-child(2){height:760px;margin-top:0}
 .ei-photo:nth-child(3){height:700px;margin-top:40px}
 
-/* ABOUT (now below editorial intro) */
-.about{display:grid;grid-template-columns:1fr 1fr;min-height:85vh}
-.about-image{overflow:hidden;background:#d9d3cd;min-height:500px;position:relative}
-.about-image img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.about-ph{position:absolute;inset:0;display:flex;align-items:flex-end;padding:2rem}
-.about-ph span{font-family:var(--sans);font-weight:300;font-size:.65rem;letter-spacing:.2em;text-transform:lowercase;color:rgba(26,26,26,.3)}
-.about-content{padding:6rem 5rem;display:flex;flex-direction:column;justify-content:center;background:var(--w)}
-.eyebrow{font-family:var(--sans);font-weight:300;font-size:.62rem;letter-spacing:.35em;text-transform:lowercase;color:var(--g);margin-bottom:2rem}
-.sec-h{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,3vw,3.2rem);line-height:1.1;color:var(--b);margin-bottom:2rem}
-.sec-h em{font-style:italic}
-.body-t{font-family:var(--sans);font-weight:300;font-size:.82rem;line-height:2.1;color:var(--g);margin-bottom:1.2rem;letter-spacing:.04em;max-width:440px}
-.sig{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.8rem;color:var(--b);margin-top:1.5rem;margin-bottom:2.5rem}
-.btn-main{font-family:var(--sans);font-weight:300;font-size:.65rem;letter-spacing:.3em;text-transform:lowercase;color:var(--w);background:var(--b);padding:1rem 2.4rem;text-decoration:none;transition:opacity .2s;display:inline-block}
-.btn-main:hover{opacity:.75}
-.btn-line{font-family:var(--sans);font-weight:300;font-size:.65rem;letter-spacing:.3em;text-transform:lowercase;color:var(--b);text-decoration:none;border-bottom:1px solid var(--b);padding-bottom:2px;transition:color .2s;display:inline-block}
-.btn-line:hover{color:var(--g);border-color:var(--g)}
-
-/* ── GALLERY — tight mosaic, fixed heights, no gaps showing ── */
+/* GALLERY */
 .gallery-section{padding:5rem 0 0}
 .gallery-header{text-align:center;padding:0 5rem 3.5rem}
-/* Row 1: tall left + 2 squares stacked right */
 .gallery-row1{display:grid;grid-template-columns:1fr 1fr;height:600px;gap:4px}
-.gallery-row1 .g-tall{grid-row:span 2;height:600px;overflow:hidden;background:#d9d3cd}
+.gallery-row1 .g-tall{grid-row:span 2;height:600px;overflow:hidden}
 .gallery-row1 .g-stack{display:grid;grid-template-rows:1fr 1fr;gap:4px;height:600px}
-.gallery-row1 .g-sq{overflow:hidden;background:#d9d3cd}
-/* Row 2: wide + single */
+.gallery-row1 .g-sq{overflow:hidden}
 .gallery-row2{display:grid;grid-template-columns:2fr 1fr;height:400px;gap:4px;margin-top:4px}
-.gallery-row2 .g-wide{overflow:hidden;background:#d9d3cd;height:400px}
-.gallery-row2 .g-sq2{overflow:hidden;background:#d9d3cd;height:400px}
-/* Row 3: 3 equal */
+.gallery-row2 .g-wide{overflow:hidden;height:400px}
+.gallery-row2 .g-sq2{overflow:hidden;height:400px}
 .gallery-row3{display:grid;grid-template-columns:repeat(3,1fr);height:420px;gap:4px;margin-top:4px}
-.gallery-row3 .g-eq{overflow:hidden;background:#d9d3cd;height:420px}
-
+.gallery-row3 .g-eq{overflow:hidden;height:420px}
 .g-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
-.g-item:hover img{transform:scale(1.03)}
-.g-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
-.g-ph span{font-family:var(--sans);font-weight:300;font-size:.65rem;letter-spacing:.2em;text-transform:lowercase;color:rgba(26,26,26,.25)}
+.g-item:hover img,.g-tall:hover img,.g-sq:hover img,.g-wide:hover img,.g-sq2:hover img,.g-eq:hover img{transform:scale(1.03)}
+.g-tall img,.g-sq img,.g-wide img,.g-sq2 img,.g-eq img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
 .gallery-footer{text-align:center;padding:3.5rem 5rem}
 
 /* STATS */
@@ -270,6 +146,14 @@ nav.scrolled .hamburger span{background:var(--b)}
 .c-val{font-family:var(--sans);font-weight:300;font-size:.85rem;letter-spacing:.06em;color:var(--b);line-height:1.7;margin-bottom:2.5rem}
 .c-val a{color:var(--b);text-decoration:none;border-bottom:1px solid var(--lg)}
 
+/* SHARED */
+.eyebrow{font-family:var(--sans);font-weight:300;font-size:.62rem;letter-spacing:.35em;text-transform:lowercase;color:var(--g);margin-bottom:2rem}
+.sec-h{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,3vw,3.2rem);line-height:1.1;color:var(--b);margin-bottom:2rem}
+.sec-h em{font-style:italic}
+.body-t{font-family:var(--sans);font-weight:300;font-size:.82rem;line-height:2.1;color:var(--g);margin-bottom:1.2rem;letter-spacing:.04em;max-width:440px}
+.btn-main{font-family:var(--sans);font-weight:300;font-size:.65rem;letter-spacing:.3em;text-transform:lowercase;color:var(--w);background:var(--b);padding:1rem 2.4rem;text-decoration:none;transition:opacity .2s;display:inline-block}
+.btn-main:hover{opacity:.75}
+
 /* FOOTER */
 footer{background:var(--w);border-top:1px solid var(--lg);padding:3.5rem 5rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:2rem}
 .f-logo{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.2rem;color:var(--b)}
@@ -289,47 +173,43 @@ footer{background:var(--w);border-top:1px solid var(--lg);padding:3.5rem 5rem;di
 
 /* MOBILE */
 @media(max-width:960px){
-  nav{padding:1.5rem 2rem}
-  nav.scrolled{padding:1rem 2rem}
-  .nav-links,.nav-book{display:none}
-  .hamburger{display:flex}
-  .hero-title{font-size:clamp(3rem,12vw,5rem)}
-  .vow-strip{padding:4rem 2rem}
-  .editorial-intro{grid-template-columns:1fr}
-  .ei-left{padding:3.5rem 2rem;border-right:none;border-bottom:1px solid var(--lg)}
-  .ei-right{grid-template-columns:repeat(3,1fr);gap:3px}
-  .ei-photo:nth-child(1){height:260px;margin-top:20px}
-  .ei-photo:nth-child(2){height:300px;margin-top:0}
-  .ei-photo:nth-child(3){height:270px;margin-top:15px}
-  .about{grid-template-columns:1fr}
-  .about-image{min-height:350px}
-  .about-content{padding:3.5rem 2rem}
-  .gallery-row1{height:auto;grid-template-columns:1fr}
-  .gallery-row1 .g-tall{height:400px}
-  .gallery-row1 .g-stack{height:auto;grid-template-rows:auto}
-  .gallery-row1 .g-sq{height:200px}
-  .gallery-row2{grid-template-columns:1fr;height:auto}
-  .gallery-row2 .g-wide,.gallery-row2 .g-sq2{height:280px}
-  .gallery-row3{grid-template-columns:1fr 1fr;height:auto}
-  .gallery-row3 .g-eq{height:220px}
-  .gallery-header,.gallery-footer{padding:0 2rem}
-  .gallery-header{padding-bottom:2.5rem}
-  .gallery-footer{padding-top:2.5rem}
-  .stats{grid-template-columns:1fr}
-  .stat{border-right:none;border-bottom:1px solid var(--lg)}
-  .stat:last-child{border-bottom:none}
-  .process{padding:4rem 2rem}
-  .process-grid{grid-template-columns:1fr 1fr;gap:2rem}
-  .testimonials{padding:4rem 2rem}
-  .test-grid{grid-template-columns:1fr}
-  .full-quote{padding:5rem 2rem}
-  .faq-section{padding:4rem 2rem}
-  .guide{grid-template-columns:1fr;padding:4rem 2rem;gap:2.5rem}
-  .contact-sec{grid-template-columns:1fr;padding:4rem 2rem;gap:3rem}
-  footer{grid-template-columns:1fr;text-align:center;padding:2.5rem 2rem}
-  .f-links{justify-content:center}
-  .f-right{text-align:center}
-  .f-social{justify-content:center}
+nav{padding:1.5rem 2rem}
+nav.scrolled{padding:1rem 2rem}
+.nav-links,.nav-book{display:none}
+.hamburger{display:flex}
+.hero-title{font-size:clamp(3rem,12vw,5rem)}
+.editorial-intro{grid-template-columns:1fr}
+.ei-left{padding:3.5rem 2rem;border-right:none;border-bottom:1px solid var(--lg)}
+.ei-right{grid-template-columns:repeat(3,1fr);gap:3px}
+.ei-photo:nth-child(1){height:260px;margin-top:20px}
+.ei-photo:nth-child(2){height:300px;margin-top:0}
+.ei-photo:nth-child(3){height:270px;margin-top:15px}
+.gallery-row1{height:auto;grid-template-columns:1fr}
+.gallery-row1 .g-tall{height:400px}
+.gallery-row1 .g-stack{height:auto;grid-template-rows:auto}
+.gallery-row1 .g-sq{height:200px}
+.gallery-row2{grid-template-columns:1fr;height:auto}
+.gallery-row2 .g-wide,.gallery-row2 .g-sq2{height:280px}
+.gallery-row3{grid-template-columns:1fr 1fr;height:auto}
+.gallery-row3 .g-eq{height:220px}
+.gallery-header,.gallery-footer{padding:0 2rem}
+.gallery-header{padding-bottom:2.5rem}
+.gallery-footer{padding-top:2.5rem}
+.stats{grid-template-columns:1fr}
+.stat{border-right:none;border-bottom:1px solid var(--lg)}
+.stat:last-child{border-bottom:none}
+.process{padding:4rem 2rem}
+.process-grid{grid-template-columns:1fr 1fr;gap:2rem}
+.testimonials{padding:4rem 2rem}
+.test-grid{grid-template-columns:1fr}
+.full-quote{padding:5rem 2rem}
+.faq-section{padding:4rem 2rem}
+.guide{grid-template-columns:1fr;padding:4rem 2rem;gap:2.5rem}
+.contact-sec{grid-template-columns:1fr;padding:4rem 2rem;gap:3rem}
+footer{grid-template-columns:1fr;text-align:center;padding:2.5rem 2rem}
+.f-links{justify-content:center}
+.f-right{text-align:center}
+.f-social{justify-content:center}
 }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Long Island Boudoir Photography","description":"Long Island's premier boudoir photography studio serving Suffolk County, NY since 2012.","url":"https://liboudoir.com","email":"inamcconnell@gmail.com","address":{"@type":"PostalAddress","addressRegion":"NY","addressCountry":"US","addressLocality":"Suffolk County"},"areaServed":["Long Island","Suffolk County","Nassau County","New York"],"priceRange":"$$"}</script>
@@ -338,311 +218,271 @@ footer{background:var(--w);border-top:1px solid var(--lg);padding:3.5rem 5rem;di
 
 <!-- NAV -->
 <nav id="nav" role="navigation" aria-label="Main navigation">
-  <a href="#" class="nav-logo">li boudoir</a>
-  <ul class="nav-links">
-    <li><a href="#about">about ina</a></li>
-    <li><a href="#gallery">gallery</a></li>
-    <li><a href="#experience">experience</a></li>
-    <li><a href="#faq">faq</a></li>
-    <li><a href="#contact">contact</a></li>
-  </ul>
-  <a href="#contact" class="nav-book">free consult</a>
-  <button class="hamburger" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+<a href="#" class="nav-logo">li boudoir</a>
+<ul class="nav-links">
+<li><a href="#about">about ina</a></li>
+<li><a href="#gallery">gallery</a></li>
+<li><a href="#experience">experience</a></li>
+<li><a href="#faq">faq</a></li>
+<li><a href="#contact">contact</a></li>
+</ul>
+<a href="#contact" class="nav-book">free consult</a>
+<button class="hamburger" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
 </nav>
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu" role="dialog">
-  <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
-  <a href="#about" onclick="closeMob()">about ina</a>
-  <a href="#gallery" onclick="closeMob()">gallery</a>
-  <a href="#experience" onclick="closeMob()">experience</a>
-  <a href="#faq" onclick="closeMob()">faq</a>
-  <a href="#contact" onclick="closeMob()">contact</a>
+<button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+<a href="#about" onclick="closeMob()">about ina</a>
+<a href="#gallery" onclick="closeMob()">gallery</a>
+<a href="#experience" onclick="closeMob()">experience</a>
+<a href="#faq" onclick="closeMob()">faq</a>
+<a href="#contact" onclick="closeMob()">contact</a>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     HERO — full bleed background, text on top
-     Replace the .hero-bg div's background color
-     with your image:
-       <img src="hero.jpg" alt="...">
-     inside .hero-bg
-════════════════════════════════════════════ -->
+<!-- HERO -->
 <header class="hero" id="home">
-  <div class="hero-bg">
-    <!-- ADD YOUR PHOTO HERE:
-    <img src="your-hero-photo.jpg" alt="Long Island boudoir photography by Ina McConnell">
-    -->
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">long island · suffolk county, ny · since 2012</p>
-    <h1 class="hero-title">
-      you are<br>
-      <em>beautiful</em><br>
-      right now.
-    </h1>
-    <p class="hero-subtitle">long island's premier boudoir photography studio.<br>real women, real empowerment.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-white">book free consult</a>
-      <a href="#gallery" class="btn-outline-white">view gallery</a>
-    </div>
-  </div>
-  <p class="hero-ph-label">← replace background with your best photo →</p>
+<div class="hero-bg">
+  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-luxury-portrait-photography-ny.jpg" alt="Long Island boudoir photography by Ina McConnell">
+</div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<p class="hero-eyebrow">long island · suffolk county, ny · since 2012</p>
+<h1 class="hero-title">
+you are<br>
+<em>beautiful</em><br>
+right now.
+</h1>
+<p class="hero-subtitle">long island's premier boudoir photography studio.<br>real women, real empowerment.</p>
+<div class="hero-actions">
+<a href="#contact" class="btn-white">book free consult</a>
+<a href="#gallery" class="btn-outline-white">view gallery</a>
+</div>
+</div>
 </header>
 
-<!-- ═══════════════════════════════════════════
-     EDITORIAL INTRO — matches Niki Marie layout:
-     Left: big display text + divider + body + small portrait
-     Right: 3 tall photos offset vertically
-════════════════════════════════════════════ -->
+<!-- EDITORIAL INTRO -->
 <section class="editorial-intro" id="about">
 
-  <!-- LEFT COLUMN -->
-  <div class="ei-left">
-    <p class="ei-sub-label">a message from ina</p>
-    <h2 class="ei-display">my promise</h2>
-    <p class="ei-sub-label">to every woman</p>
-    <h2 class="ei-display">is simple</h2>
-    <div class="ei-divider"></div>
-    <p class="ei-body">I vow to make you feel seen, celebrated, and breathtakingly beautiful —</p>
-    <p class="ei-body-small">exactly as you are, right now</p>
+<div class="ei-left">
+<p class="ei-sub-label">a message from ina</p>
+<h2 class="ei-display">my promise</h2>
+<p class="ei-sub-label">to every woman</p>
+<h2 class="ei-display">is simple</h2>
+<div class="ei-divider"></div>
+<p class="ei-body">I vow to make you feel seen, celebrated, and breathtakingly beautiful —</p>
+<p class="ei-body-small">exactly as you are, right now</p>
 
-    <!-- Small portrait of Ina at bottom -->
-    <!-- ADD YOUR PHOTO: replace .ei-portrait-ph with <img src="ina-headshot.jpg" alt="Ina McConnell"> -->
-    <div class="ei-portrait">
-      <div class="ei-portrait-ph"><span>ina's photo here</span></div>
-    </div>
-    <p class="ei-portrait-label">meet ina</p>
-  </div>
+<div class="ei-portrait">
+  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-photographer-eena-mcconnell.jpg" alt="Ina McConnell, Long Island boudoir photographer">
+</div>
+<p class="ei-portrait-label">meet ina</p>
+</div>
 
-  <!-- RIGHT COLUMN: 3 tall offset photos -->
-  <div class="ei-right">
-    <div class="ei-photo">
-      <!-- <img src="boudoir1.jpg" alt="Long Island boudoir portrait"> -->
-      <div class="ei-photo-ph"><span>photo 1</span></div>
-    </div>
-    <div class="ei-photo">
-      <!-- <img src="boudoir2.jpg" alt="Long Island boudoir portrait"> -->
-      <div class="ei-photo-ph"><span>photo 2</span></div>
-    </div>
-    <div class="ei-photo">
-      <!-- <img src="boudoir3.jpg" alt="Long Island boudoir portrait"> -->
-      <div class="ei-photo-ph"><span>photo 3</span></div>
-    </div>
-  </div>
+<div class="ei-right">
+<div class="ei-photo">
+  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/ina-mcconnell-boudoir-photography-long-island-portrait-01.jpg" alt="Long Island boudoir portrait">
+</div>
+<div class="ei-photo">
+  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/ina-mcconnell-boudoir-photography-long-island-portrait-02.jpg" alt="Long Island boudoir portrait">
+</div>
+<div class="ei-photo">
+  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/boudoir-black-white-portrait-suffolk-county-lace-jewelry-long-island.jpg" alt="Long Island boudoir portrait">
+</div>
+</div>
 
 </section>
 
-<!-- ═══════════════════════════════════════════
-     GALLERY — editorial mosaic
-     Replace each .g-ph div with:
-       <img src="photo.jpg" alt="description">
-════════════════════════════════════════════ -->
+<!-- GALLERY -->
 <section class="gallery-section" id="gallery">
-  <div class="gallery-header reveal">
-    <p class="eyebrow">portfolio</p>
-    <h2 class="sec-h">real women.<br><em>real moments.</em></h2>
-  </div>
+<div class="gallery-header reveal">
+<p class="eyebrow">portfolio</p>
+<h2 class="sec-h">real women.<br><em>real moments.</em></h2>
+</div>
 
-  <!-- Row 1: tall portrait left, two squares stacked right -->
-  <div class="gallery-row1">
-    <div class="g-tall">
-      <div class="g-ph"><span>portrait 1 — tall</span></div>
-      <!-- <img src="photo1.jpg" alt="boudoir portrait"> -->
-    </div>
-    <div class="g-stack">
-      <div class="g-sq">
-        <div class="g-ph"><span>portrait 2</span></div>
-        <!-- <img src="photo2.jpg" alt="boudoir portrait"> -->
-      </div>
-      <div class="g-sq">
-        <div class="g-ph"><span>portrait 3</span></div>
-        <!-- <img src="photo3.jpg" alt="boudoir portrait"> -->
-      </div>
-    </div>
-  </div>
+<!-- Row 1: tall portrait left, two squares stacked right -->
+<div class="gallery-row1">
+<div class="g-tall">
+  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/boudoir-woman-standing-black-lingerie-long-island.jpg" alt="Boudoir portrait Long Island">
+</div>
+<div class="g-stack">
+<div class="g-sq">
+  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/ina-mcconnell-boudoir-client-testimonial-long-island-11.jpg" alt="Boudoir portrait Long Island">
+</div>
+<div class="g-sq">
+  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/ina-mcconnell-boudoir-client-testimonial-long-island-12.jpg" alt="Boudoir portrait Long Island">
+</div>
+</div>
+</div>
 
-  <!-- Row 2: wide landscape left, portrait right -->
-  <div class="gallery-row2">
-    <div class="g-wide">
-      <div class="g-ph"><span>wide featured — landscape</span></div>
-      <!-- <img src="photo4.jpg" alt="boudoir portrait"> -->
-    </div>
-    <div class="g-sq2">
-      <div class="g-ph"><span>portrait 4</span></div>
-      <!-- <img src="photo5.jpg" alt="boudoir portrait"> -->
-    </div>
-  </div>
+<!-- Row 2: wide landscape left, portrait right -->
+<div class="gallery-row2">
+<div class="g-wide">
+  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/boudoir-woman-laying-bed-long-island-photoshoot.jpg" alt="Boudoir portrait Long Island">
+</div>
+<div class="g-sq2">
+  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-photo-studio-ny-04.jpg" alt="Boudoir portrait Long Island">
+</div>
+</div>
 
-  <!-- Row 3: three equal -->
-  <div class="gallery-row3">
-    <div class="g-eq">
-      <div class="g-ph"><span>portrait 5</span></div>
-      <!-- <img src="photo6.jpg" alt="boudoir portrait"> -->
-    </div>
-    <div class="g-eq">
-      <div class="g-ph"><span>portrait 6</span></div>
-      <!-- <img src="photo7.jpg" alt="boudoir portrait"> -->
-    </div>
-    <div class="g-eq">
-      <div class="g-ph"><span>portrait 7</span></div>
-      <!-- <img src="photo8.jpg" alt="boudoir portrait"> -->
-    </div>
-  </div>
+<!-- Row 3: three equal -->
+<div class="gallery-row3">
+<div class="g-eq">
+  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/ina-mcconnell-boudoir-client-testimonial-long-island-06.jpg" alt="Boudoir portrait Long Island">
+</div>
+<div class="g-eq">
+  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-photographer-window-black.jpg" alt="Boudoir portrait Long Island">
+</div>
+<div class="g-eq">
+  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-studio-velvet-chair-intimate-portrait.jpg" alt="Boudoir portrait Long Island">
+</div>
+</div>
 
-  <div class="gallery-footer reveal">
-    <a href="#contact" class="btn-main">book your session</a>
-  </div>
+<div class="gallery-footer reveal">
+<a href="#contact" class="btn-main">book your session</a>
+</div>
 </section>
 
 <!-- STATS -->
 <div class="stats" id="experience">
-  <div class="stat reveal"><div class="stat-n">12+</div><div class="stat-l">years of experience</div></div>
-  <div class="stat reveal"><div class="stat-n"><em>all</em></div><div class="stat-l">women welcome</div></div>
-  <div class="stat reveal"><div class="stat-n">100%</div><div class="stat-l">all-female team</div></div>
+<div class="stat reveal"><div class="stat-n">12+</div><div class="stat-l">years of experience</div></div>
+<div class="stat reveal"><div class="stat-n"><em>all</em></div><div class="stat-l">women welcome</div></div>
+<div class="stat reveal"><div class="stat-n">100%</div><div class="stat-l">all-female team</div></div>
 </div>
 
 <!-- PROCESS -->
 <section class="process">
-  <div class="reveal">
-    <p class="eyebrow">how it works</p>
-    <h2 class="sec-h">your <em>experience,</em><br>from start to finish.</h2>
-  </div>
-  <div class="process-grid">
-    <div class="reveal"><div class="p-num">01</div><h3 class="p-title">free consultation</h3><p class="p-desc">we chat about your vision, wardrobe, and goals. no pressure — just a conversation to make sure we're the perfect fit.</p></div>
-    <div class="reveal"><div class="p-num">02</div><h3 class="p-title">prep & coaching</h3><p class="p-desc">you'll receive our full posing guide before your shoot. i coach you every step of the way — you just relax.</p></div>
-    <div class="reveal"><div class="p-num">03</div><h3 class="p-title">hair, makeup & shoot</h3><p class="p-desc">arrive and be pampered. our team transforms you, then we create images that will take your breath away.</p></div>
-    <div class="reveal"><div class="p-num">04</div><h3 class="p-title">reveal & delivery</h3><p class="p-desc">we reveal your images together. choose your favorites for prints, albums, or digital files to treasure forever.</p></div>
-  </div>
+<div class="reveal">
+<p class="eyebrow">how it works</p>
+<h2 class="sec-h">your <em>experience,</em><br>from start to finish.</h2>
+</div>
+<div class="process-grid">
+<div class="reveal"><div class="p-num">01</div><h3 class="p-title">free consultation</h3><p class="p-desc">we chat about your vision, wardrobe, and goals. no pressure — just a conversation to make sure we're the perfect fit.</p></div>
+<div class="reveal"><div class="p-num">02</div><h3 class="p-title">prep & coaching</h3><p class="p-desc">you'll receive our full posing guide before your shoot. i coach you every step of the way — you just relax.</p></div>
+<div class="reveal"><div class="p-num">03</div><h3 class="p-title">hair, makeup & shoot</h3><p class="p-desc">arrive and be pampered. our team transforms you, then we create images that will take your breath away.</p></div>
+<div class="reveal"><div class="p-num">04</div><h3 class="p-title">reveal & delivery</h3><p class="p-desc">we reveal your images together. choose your favorites for prints, albums, or digital files to treasure forever.</p></div>
+</div>
 </section>
 
 <!-- TESTIMONIALS -->
 <section class="testimonials">
-  <div class="reveal">
-    <p class="eyebrow">what women say</p>
-    <h2 class="sec-h"><em>their words.</em></h2>
-  </div>
-  <div class="test-grid">
-    <div class="reveal">
-      <blockquote class="t-quote">"I was so nervous going in. By the end of the shoot I was laughing and loving every pose. Ina makes you feel so at ease. The photos are beyond anything I imagined."</blockquote>
-      <p class="t-name">— jillian, 42</p>
-    </div>
-    <div class="reveal">
-      <blockquote class="t-quote">"I'd been putting this off for years waiting to lose weight. I'm so glad I finally went. These photos are the best thing I've ever done for myself."</blockquote>
-      <p class="t-name">— amber, 38</p>
-    </div>
-    <div class="reveal">
-      <blockquote class="t-quote">"The hair and makeup alone were worth it. I've never felt so beautiful. Ina knows exactly how to pose you to look your absolute best."</blockquote>
-      <p class="t-name">— marissa, 51</p>
-    </div>
-  </div>
+<div class="reveal">
+<p class="eyebrow">what women say</p>
+<h2 class="sec-h"><em>their words.</em></h2>
+</div>
+<div class="test-grid">
+<div class="reveal">
+<blockquote class="t-quote">"I was so nervous going in. By the end of the shoot I was laughing and loving every pose. Ina makes you feel so at ease. The photos are beyond anything I imagined."</blockquote>
+<p class="t-name">— jillian, 42</p>
+</div>
+<div class="reveal">
+<blockquote class="t-quote">"I'd been putting this off for years waiting to lose weight. I'm so glad I finally went. These photos are the best thing I've ever done for myself."</blockquote>
+<p class="t-name">— amber, 38</p>
+</div>
+<div class="reveal">
+<blockquote class="t-quote">"The hair and makeup alone were worth it. I've never felt so beautiful. Ina knows exactly how to pose you to look your absolute best."</blockquote>
+<p class="t-name">— marissa, 51</p>
+</div>
+</div>
 </section>
 
 <!-- FULL BLEED QUOTE -->
 <section class="full-quote">
-  <p class="fq-sm">a note from ina</p>
-  <p class="fq-lg">"I truly believe every woman deserves to see herself the way the people who love her see her. That's what this work is about."</p>
-  <p class="fq-attr">— ina mcconnell, long island boudoir</p>
+<p class="fq-sm">a note from ina</p>
+<p class="fq-lg">"I truly believe every woman deserves to see herself the way the people who love her see her. That's what this work is about."</p>
+<p class="fq-attr">— ina mcconnell, long island boudoir</p>
 </section>
 
 <!-- FAQ -->
 <section class="faq-section" id="faq">
-  <div class="reveal" style="margin-bottom:3.5rem;">
-    <p class="eyebrow">common questions</p>
-    <h2 class="sec-h">you have questions.<br><em>i have answers.</em></h2>
-  </div>
-  <div class="faq-item">
-    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">i'm not a model — how will i know how to pose?<span class="faq-icon">+</span></button>
-    <div class="faq-a">you will be coached from the moment you book. i guide you through every single pose — you just relax, be yourself, and enjoy the experience. no modeling experience required, ever.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">i want to do this but i'm not ready yet.<span class="faq-icon">+</span></button>
-    <div class="faq-a">most people say they'll do it after they lose 20 pounds. don't wait. with professional posing, your body will look incredible right now — and you'll wonder why you waited so long.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">are the women on your website professional models?<span class="faq-icon">+</span></button>
-    <div class="faq-a">every single woman on this website is a real, everyday person — teachers, nurses, lawyers, moms. we photograph women exactly like you, and we love showing that anyone can look amazing.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">what should i bring or wear?<span class="faq-icon">+</span></button>
-    <div class="faq-a">after booking, you'll receive our full preparation guide. generally, bring 2–4 outfit options — lingerie, a partner's oversized shirt, a cozy robe. anything that makes you feel beautiful. we'll decide together.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">is hair and makeup included?<span class="faq-icon">+</span></button>
-    <div class="faq-a">yes! professional hair and makeup by our all-female team is included. this is a full pamper experience — not just a photoshoot.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">will my photos be used publicly?<span class="faq-icon">+</span></button>
-    <div class="faq-a">we always ask for explicit permission before using any images on our website or social media. your privacy is completely respected. it is always your choice.</div>
-  </div>
+<div class="reveal" style="margin-bottom:3.5rem;">
+<p class="eyebrow">common questions</p>
+<h2 class="sec-h">you have questions.<br><em>i have answers.</em></h2>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">i'm not a model — how will i know how to pose?<span class="faq-icon">+</span></button>
+<div class="faq-a">you will be coached from the moment you book. i guide you through every single pose — you just relax, be yourself, and enjoy the experience. no modeling experience required, ever.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">i want to do this but i'm not ready yet.<span class="faq-icon">+</span></button>
+<div class="faq-a">most people say they'll do it after they lose 20 pounds. don't wait. with professional posing, your body will look incredible right now — and you'll wonder why you waited so long.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">are the women on your website professional models?<span class="faq-icon">+</span></button>
+<div class="faq-a">every single woman on this website is a real, everyday person — teachers, nurses, lawyers, moms. we photograph women exactly like you, and we love showing that anyone can look amazing.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">what should i bring or wear?<span class="faq-icon">+</span></button>
+<div class="faq-a">after booking, you'll receive our full preparation guide. generally, bring 2–4 outfit options — lingerie, a partner's oversized shirt, a cozy robe. anything that makes you feel beautiful. we'll decide together.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">is hair and makeup included?<span class="faq-icon">+</span></button>
+<div class="faq-a">yes! professional hair and makeup by our all-female team is included. this is a full pamper experience — not just a photoshoot.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">will my photos be used publicly?<span class="faq-icon">+</span></button>
+<div class="faq-a">we always ask for explicit permission before using any images on our website or social media. your privacy is completely respected. it is always your choice.</div>
+</div>
 </section>
 
-<!-- GUIDE / FLODESK -->
+<!-- GUIDE -->
 <section class="guide">
-  <div class="reveal">
-    <p class="eyebrow">free download</p>
-    <h2 class="sec-h">get my free<br><em>shoot prep guide.</em></h2>
-    <p class="body-t">everything you need to know before your session — wardrobe tips, what to expect, and how to feel your most confident.</p>
-  </div>
-  <div class="reveal">
-    <!-- PASTE YOUR FLODESK INLINE EMBED CODE HERE -->
-    <!-- It will look like:
-    <script src="https://assets.flodesk.com/universal.js"></script>
-    <div class="fl-builtin" id="fl-builtin-YOURFORMID" data-rid="YOURFORMID"></div>
-    -->
-    <!-- Temporary form until Flodesk is connected: -->
-    <form class="guide-form" action="https://sparkling-sound-78326.myflodesk.com/wh2ro1o0k7" method="GET" target="_blank">
-      <input type="email" name="email" placeholder="your email address" required>
-      <button type="submit" class="btn-main" style="cursor:pointer;border:none;margin-top:.5rem;">send me the guide</button>
-    </form>
-  </div>
+<div class="reveal">
+<p class="eyebrow">free download</p>
+<h2 class="sec-h">get my free<br><em>shoot prep guide.</em></h2>
+<p class="body-t">everything you need to know before your session — wardrobe tips, what to expect, and how to feel your most confident.</p>
+</div>
+<div class="reveal">
+<form class="guide-form" action="https://sparkling-sound-78326.myflodesk.com/wh2ro1o0k7" method="GET" target="_blank">
+<input type="email" name="email" placeholder="your email address" required>
+<button type="submit" class="btn-main" style="cursor:pointer;border:none;margin-top:.5rem;">send me the guide</button>
+</form>
+</div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact-sec" id="contact">
-  <div class="reveal">
-    <p class="eyebrow">let's connect</p>
-    <h2 class="sec-h">ready to<br><em>celebrate you?</em></h2>
-    <div style="margin-top:2.5rem;">
-      <div class="c-label">location</div>
-      <div class="c-val">suffolk county, long island, new york</div>
-      <div class="c-label" style="margin-top:2rem;">email</div>
-      <div class="c-val"><a href="mailto:inamcconnell@gmail.com">inamcconnell@gmail.com</a></div>
-      <div class="c-label" style="margin-top:2rem;">response time</div>
-      <div class="c-val">within 24 hours — usually much sooner.</div>
-    </div>
-  </div>
-  <div class="reveal">
-    <!-- PASTE YOUR FLODESK CONTACT FORM EMBED HERE if you prefer -->
-    <!-- Or keep this basic form: -->
-    <form class="contact-form" action="mailto:inamcconnell@gmail.com" method="GET">
-      <input type="text" name="name" placeholder="your name" required>
-      <input type="email" name="email" placeholder="your email address" required>
-      <input type="tel" name="phone" placeholder="phone number (optional)">
-      <textarea name="body" placeholder="tell me about yourself and what you're thinking..."></textarea>
-      <button type="submit" class="btn-main" style="cursor:pointer;border:none;margin-top:.5rem;">send message</button>
-    </form>
-  </div>
+<div class="reveal">
+<p class="eyebrow">let's connect</p>
+<h2 class="sec-h">ready to<br><em>celebrate you?</em></h2>
+<div style="margin-top:2.5rem;">
+<div class="c-label">location</div>
+<div class="c-val">suffolk county, long island, new york</div>
+<div class="c-label" style="margin-top:2rem;">email</div>
+<div class="c-val"><a href="mailto:inamcconnell@gmail.com">inamcconnell@gmail.com</a></div>
+<div class="c-label" style="margin-top:2rem;">response time</div>
+<div class="c-val">within 24 hours — usually much sooner.</div>
+</div>
+</div>
+<div class="reveal">
+<form class="contact-form" action="mailto:inamcconnell@gmail.com" method="GET">
+<input type="text" name="name" placeholder="your name" required>
+<input type="email" name="email" placeholder="your email address" required>
+<input type="tel" name="phone" placeholder="phone number (optional)">
+<textarea name="body" placeholder="tell me about yourself and what you're thinking..."></textarea>
+<button type="submit" class="btn-main" style="cursor:pointer;border:none;margin-top:.5rem;">send message</button>
+</form>
+</div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="f-logo">li boudoir<span>long island boudoir photography</span></div>
-  <nav class="f-links" aria-label="Footer navigation">
-    <a href="#about">about</a>
-    <a href="#gallery">gallery</a>
-    <a href="#experience">experience</a>
-    <a href="#contact">contact</a>
-  </nav>
-  <div class="f-right">
-    <p class="f-copy">© 2025 long island boudoir · suffolk county, ny<br>all rights reserved.</p>
-    <div class="f-social">
-      <a href="#" aria-label="Instagram">instagram</a>
-      <a href="#" aria-label="Facebook">facebook</a>
-    </div>
-  </div>
+<div class="f-logo">li boudoir<span>long island boudoir photography</span></div>
+<nav class="f-links" aria-label="Footer navigation">
+<a href="#about">about</a>
+<a href="#gallery">gallery</a>
+<a href="#experience">experience</a>
+<a href="#contact">contact</a>
+</nav>
+<div class="f-right">
+<p class="f-copy">© 2025 long island boudoir · suffolk county, ny<br>all rights reserved.</p>
+<div class="f-social">
+<a href="#" aria-label="Instagram">instagram</a>
+<a href="#" aria-label="Facebook">facebook</a>
+</div>
+</div>
 </footer>
 
 <script>
