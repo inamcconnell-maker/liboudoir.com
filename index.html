@@ -17,7 +17,7 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--w:#ffffff;--b:#1a1a1a;--g:#888;--lg:#e8e8e8;--f:#f5f5f5;--serif:'Playfair Display',Georgia,serif;--sans:'Raleway',sans-serif}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{background:var(--w);color:var(--b);font-family:var(--sans);font-weight:300;overflow-x:hidden}
 
 /* NAV */
@@ -45,7 +45,7 @@ nav.scrolled .hamburger span{background:var(--b)}
 .hero-bg{position:absolute;inset:0;z-index:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
 .hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.32);z-index:1}
-.hero-content{position:relative;z-index:2;text-align:center;padding:0 2rem;display:flex;flex-direction:column;align-items:center;gap:1.5rem}
+.hero-content{position:relative;z-index:2;text-align:center;padding:7rem 2rem 0;display:flex;flex-direction:column;align-items:center;gap:1.5rem}
 .hero-eyebrow{font-family:var(--sans);font-weight:300;font-size:.62rem;letter-spacing:.35em;color:rgba(255,255,255,0.75)}
 .hero-title{font-family:var(--serif);font-weight:400;font-size:clamp(3.8rem,8vw,8rem);line-height:1.0;color:var(--w)}
 .hero-title em{font-style:italic}
@@ -78,22 +78,10 @@ nav.scrolled .hamburger span{background:var(--b)}
 /* GALLERY */
 .gallery-section{padding:5rem 0 0}
 .gallery-header{text-align:center;padding:0 5rem 3.5rem}
-.gallery-row1{display:grid;grid-template-columns:1fr 1fr;height:620px;gap:20px;padding:0 4rem}
-.gallery-row1 .g-tall{height:620px;overflow:hidden}
-.gallery-row1 .g-stack{display:grid;grid-template-rows:1fr 1fr;gap:20px;height:620px}
-.gallery-row1 .g-sq{overflow:hidden}
-.gallery-row2{display:grid;grid-template-columns:3fr 2fr;height:480px;gap:20px;margin-top:20px;padding:0 4rem}
-.gallery-row2 .g-wide{overflow:hidden;height:480px}
-.gallery-row2 .g-sq2{overflow:hidden;height:480px}
-.gallery-row3{display:grid;grid-template-columns:repeat(3,1fr);height:440px;gap:20px;margin-top:20px;padding:0 4rem}
-.gallery-row3 .g-eq{overflow:hidden;height:440px}
-.g-item img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;transition:transform .6s ease}
-.g-item:hover img,.g-tall:hover img,.g-sq:hover img,.g-wide:hover img,.g-sq2:hover img,.g-eq:hover img{transform:scale(1.04)}
-.g-tall img,.g-sq img,.g-wide img,.g-sq2 img,.g-eq img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;transition:transform .6s ease}
-/* Portrait-slot images show upper body */
-.g-tall img,.g-sq img,.g-eq img{object-position:center 20%}
-/* Landscape-slot images show center */
-.g-wide img{object-position:center center}
+.gallery-masonry{columns:3;column-gap:18px;padding:0 4rem}
+.g-item{break-inside:avoid;margin-bottom:18px;overflow:hidden;display:block}
+.g-item img{width:100%;height:auto;display:block;transition:transform .6s ease}
+.g-item:hover img{transform:scale(1.03)}
 .gallery-footer{text-align:center;padding:3.5rem 5rem}
 
 /* STATS */
@@ -188,14 +176,8 @@ nav.scrolled{padding:1rem 2rem}
 .ei-photo:nth-child(1){height:260px;margin-top:20px}
 .ei-photo:nth-child(2){height:300px;margin-top:0}
 .ei-photo:nth-child(3){height:270px;margin-top:15px}
-.gallery-row1{height:auto;grid-template-columns:1fr;padding:0 1.5rem;gap:12px}
-.gallery-row1 .g-tall{height:400px}
-.gallery-row1 .g-stack{height:auto;grid-template-rows:auto;gap:12px}
-.gallery-row1 .g-sq{height:220px}
-.gallery-row2{grid-template-columns:1fr;height:auto;padding:0 1.5rem;gap:12px;margin-top:12px}
-.gallery-row2 .g-wide,.gallery-row2 .g-sq2{height:280px}
-.gallery-row3{grid-template-columns:1fr 1fr;height:auto;padding:0 1.5rem;gap:12px;margin-top:12px}
-.gallery-row3 .g-eq{height:220px}
+.gallery-masonry{columns:2;column-gap:10px;padding:0 1.5rem}
+.g-item{margin-bottom:10px}
 .gallery-header,.gallery-footer{padding:0 2rem}
 .gallery-header{padding-bottom:2.5rem}
 .gallery-footer{padding-top:2.5rem}
@@ -249,7 +231,7 @@ footer{grid-template-columns:1fr;text-align:center;padding:2.5rem 2rem}
 <!-- HERO -->
 <header class="hero" id="home">
 <div class="hero-bg">
-  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-studio-window-editorial.jpg" alt="Long Island boudoir photography by Ina McConnell">
+  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/boudoir-woman-posing-colorful-sheets-long-island.jpg" alt="Long Island boudoir photography by Ina McConnell">
 </div>
 <div class="hero-overlay"></div>
 <div class="hero-content">
@@ -306,42 +288,25 @@ right now.
 <h2 class="sec-h">Real Women.<br><em>Real Moments.</em></h2>
 </div>
 
-<!-- Row 1: tall portrait left, two squares stacked right -->
-<div class="gallery-row1">
-<div class="g-tall">
-  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/boudoir-woman-standing-black-lingerie-long-island.jpg" alt="Boudoir portrait Long Island">
-</div>
-<div class="g-stack">
-<div class="g-sq">
-  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/ina-mcconnell-boudoir-client-testimonial-long-island-11.jpg" alt="Boudoir portrait Long Island">
-</div>
-<div class="g-sq">
-  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/ina-mcconnell-boudoir-client-testimonial-long-island-12.jpg" alt="Boudoir portrait Long Island">
-</div>
-</div>
-</div>
-
-<!-- Row 2: wide landscape left, portrait right -->
-<div class="gallery-row2">
-<div class="g-wide">
-  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-luxury-portrait-photography-ny.jpg" alt="Boudoir portrait Long Island" style="object-position:center 30%">
-</div>
-<div class="g-sq2">
-  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-photo-studio-ny-04.jpg" alt="Boudoir portrait Long Island">
-</div>
-</div>
-
-<!-- Row 3: three equal -->
-<div class="gallery-row3">
-<div class="g-eq">
-  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/ina-mcconnell-boudoir-client-testimonial-long-island-06.jpg" alt="Boudoir portrait Long Island">
-</div>
-<div class="g-eq">
-  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-photographer-window-black.jpg" alt="Boudoir portrait Long Island">
-</div>
-<div class="g-eq">
-  <img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-studio-velvet-chair-intimate-portrait.jpg" alt="Boudoir portrait Long Island">
-</div>
+<div class="gallery-masonry">
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/boudoir-woman-standing-black-lingerie-long-island.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/ina-mcconnell-boudoir-client-testimonial-long-island-06.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-photographer-window-black.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/ina-mcconnell-boudoir-client-testimonial-long-island-11.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-luxury-portrait-photography-ny.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/ina-mcconnell-boudoir-client-testimonial-long-island-12.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-studio-velvet-chair-intimate-portrait.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/ina-mcconnell-boudoir-client-testimonial-long-island-14b.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-photographer-red-lingerie-closeup-portrait.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/ina-mcconnell-boudoir-client-testimonial-long-island-15b.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-photography-champagne-velvet-chair.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/ina-mcconnell-boudoir-client-testimonial-long-island-18.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-photography-window-bw.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/ina-mcconnell-boudoir-client-testimonial-long-island-24.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-photo-studio-ny-04.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-photographer-pearl-necklace-bw.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/boudoir-woman-laying-bed-long-island-photoshoot.jpg" alt="Boudoir portrait Long Island"></div>
+<div class="g-item"><img src="https://raw.githubusercontent.com/inamcconnell-maker/liboudoir.com/main/long-island-boudoir-studio-window-light-velvet-chair.jpg" alt="Boudoir portrait Long Island"></div>
 </div>
 
 <div class="gallery-footer reveal">
